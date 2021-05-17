@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Word Frequency Counter WebApp</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <h4 class="text-center alert alert-info">Showing Word Frequency Counter WebApp</h4>
+                <h5 class="alert alert-warning">Displayed Data coming from <span class="bg-info text-white">{{ value }}</span></h5>
+
+                {% if st %}
+                <div class="text-center">
+                    <b>URL = {{ st.URL }}</b>
+
+                    <table class="table table-hover my-3">
+                        <thead>
+                            <tr>
+                                <th>Element Number</th>
+                                <th>Word</th>
+                                <th>Element Occuring</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="col">E1</th>
+                                <td>{{ st.E1 }}</td>
+                                <td>{{ st.E1O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E2</th>
+                                <td>{{ st.E2 }}</td>
+                                <td>{{ st.E2O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E3</th>
+                                <td>{{ st.E3 }}</td>
+                                <td>{{ st.E3O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E4</th>
+                                <td>{{ st.E4 }}</td>
+                                <td>{{ st.E4O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E5</th>
+                                <td>{{ st.E5 }}</td>
+                                <td>{{ st.E5O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E6</th>
+                                <td>{{ st.E6 }}</td>
+                                <td>{{ st.E6O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E7</th>
+                                <td>{{ st.E7 }}</td>
+                                <td>{{ st.E7O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E8</th>
+                                <td>{{ st.E8 }}</td>
+                                <td>{{ st.E8O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E9</th>
+                                <td>{{ st.E9 }}</td>
+                                <td>{{ st.E9O }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">E10</th>
+                                <td>{{ st.E10 }}</td>
+                                <td>{{ st.E10O }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

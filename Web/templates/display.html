@@ -1,1 +1,106 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Word Frequency Counter WebApp</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-center alert alert-info">Add URL Link</h4>
+                <form action="{% url 'output' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-success my-2" value="Add">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4 class="text-center alert alert-info">Show All Entries</h4>
+                {% if entries %}
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">URL</th>
+                            <th scope="col">E1</th>
+                            <th scope="col">E1O</th>
+                            <th scope="col">E2</th>
+                            <th scope="col">E2O</th>
+                            <th scope="col">E3</th>
+                            <th scope="col">E3O</th>
+                            <th scope="col">E4</th>
+                            <th scope="col">E4O</th>
+                            <th scope="col">E5</th>
+                            <th scope="col">E5O</th>
+                            <th scope="col">E6</th>
+                            <th scope="col">E6O</th>
+                            <th scope="col">E7</th>
+                            <th scope="col">E7O</th>
+                            <th scope="col">E8</th>
+                            <th scope="col">E8O</th>
+                            <th scope="col">E9</th>
+                            <th scope="col">E9O</th>
+                            <th scope="col">E10</th>
+                            <th scope="col">E10O</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for st in entries %}
+                        <tr>
+                            <td>{{ st.URL }}</td>
+                            <td>{{ st.E1 }}</td>
+                            <td>{{ st.E1O }}</td>
+                            <td>{{ st.E2 }}</td>
+                            <td>{{ st.E2O }}</td>
+                            <td>{{ st.E3 }}</td>
+                            <td>{{ st.E3O }}</td>
+                            <td>{{ st.E4 }}</td>
+                            <td>{{ st.E4O }}</td>
+                            <td>{{ st.E5 }}</td>
+                            <td>{{ st.E5O }}</td>
+                            <td>{{ st.E6 }}</td>
+                            <td>{{ st.E6O }}</td>
+                            <td>{{ st.E7 }}</td>
+                            <td>{{ st.E7O }}</td>
+                            <td>{{ st.E8 }}</td>
+                            <td>{{ st.E8O }}</td>
+                            <td>{{ st.E9 }}</td>
+                            <td>{{ st.E9O }}</td>
+                            <td>{{ st.E10 }}</td>
+                            <td>{{ st.E10O }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <h4 class="text-center alert alert-warning">No Records Found</h4>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
